@@ -1,0 +1,8 @@
+services:
+    shortener.service:
+        class: ShortenerBundle\Service\ShortenerService
+        arguments: [@doctrine.orm.entity_manager, @router, @shorteer.hashids]
+
+    shorteer.hashids:
+        class: Hashids\Hashids
+        arguments: ["%shortener_salt%", "%shortener_code_min_length%", "%shortener_alphabet%"]

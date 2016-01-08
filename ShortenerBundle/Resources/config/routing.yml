@@ -1,0 +1,11 @@
+shortener_redirect_code:
+    path: /{code}
+    defaults: { _controller: ShortenerBundle:Shortener:decodeAndRedirect }
+
+shortener_encode:
+    path: /encode
+    defaults: { _controller: ShortenerBundle:Shortener:encode }
+
+shortener_decode:
+    path: /decode
+    defaults: { _controller: ShortenerBundle:Shortener:decode }
